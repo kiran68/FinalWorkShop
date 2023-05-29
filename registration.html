@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <script>
+    function submitForm() {
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+      if (password === "password123") {
+        // Redirect to the dashboard page
+        window.location.href = "dashboard.html";
+      } else {
+        localStorage.setItem("name", name);
+        localStorage.setItem("password", password);
+        alert("Please enter the correct password.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Login Page</h1>
+  
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Welcome to the Dashboard</h1>
+  
+  <h2>My Hobbies</h2>
+  <ul id="hobbiesList"></ul>
+  
+  <script>
+
+    var hobbies = ["Cycling", "Gaming"];
+    
+    function displayHobbies() {
+      var hobbiesList = document.getElementById("hobbiesList");
+      hobbies.forEach(function(hobby) {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(hobby));
+        hobbiesList.appendChild(li);
+      });
+    }
+    displayHobbies();
+  </script>
+</body>
+</html>
